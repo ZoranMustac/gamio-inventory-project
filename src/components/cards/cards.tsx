@@ -12,6 +12,7 @@ export const Cards: FC<IProps> = ({ name, tag, level }) => {
   return (
     <div>
       <Card />
+      <p>Gamio</p>
     </div>
   );
 };

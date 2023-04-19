@@ -1,22 +1,52 @@
 import React, { FC } from "react";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import "./css/header.css";
 
 export const Header: FC = () => {
+  const buttons: string = `
+    active:border-solid
+    active:border-orange-500
+    active:border-b-4
+    active:text-white
+    hover:border-solid
+    hover:border-orange-500
+    hover:border-b-4
+    hover:text-white
+    pb-2
+`;
+
+  const views = [
+    {
+      title: "overview",
+    },
+    {
+      title: "inventory",
+    },
+    {
+      title: "settings",
+    },
+  ];
+
   return (
     <div>
-      <div className="w-full h-24 md:h-48 lg:h-96 bg-black flex">
+      <div className="w-full h-24 md:h-48 lg:h-96 bg-black relative">
         <img
           src="https://eloncdn.blob.core.windows.net/eu3/sites/74/2019/09/students-1.jpg"
           className="w-full h-full object-cover opacity-40"
         />
-      </div>
-      <div>
-        <div className="ml-56 font-bold text-gray-400 text-sm flex flex-nowrap pr-6">
-          <button>OVERVIEW</button>
-          <button>INVENTORY</button>
-          <button>SETTINGS</button>
+        <div className="flex flex-wrap pb-12 ml-48 pl-2 forward">
+          {views.map((title) => {
+            return (
+              <div className="ml-12 font-bold text-gray-400 text-xs forward">
+                <div className={buttons}>
+                  <button>{title.title.toLocaleUpperCase()}</button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
+
       <div>
         <div className="absolute top-44 bg-blue-500 w-48 h-64 pt-6 bg-contain pl-12 clip-rectangle" />
         <div className="absolute top-52 ml-24 flex">
