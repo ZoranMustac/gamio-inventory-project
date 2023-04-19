@@ -1,8 +1,12 @@
-import React, { FC } from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import "./css/header.css";
+import React, { FC, useState } from "react";
+import "./header.css";
+import { Cards } from "../cards/cards";
+import { NavLink } from "react-router-dom";
+import { Title } from "../title/title";
+import { useHeader } from "./useHeader";
 
 export const Header: FC = () => {
+  const { views } = useHeader();
   const buttons: string = `
     active:border-solid
     active:border-orange-500
@@ -14,18 +18,6 @@ export const Header: FC = () => {
     hover:text-white
     pb-2
 `;
-
-  const views = [
-    {
-      title: "overview",
-    },
-    {
-      title: "inventory",
-    },
-    {
-      title: "settings",
-    },
-  ];
 
   return (
     <div>
@@ -39,7 +31,9 @@ export const Header: FC = () => {
             return (
               <div className="ml-12 font-bold text-gray-400 text-xs forward">
                 <div className={buttons}>
-                  <button>{title.title.toLocaleUpperCase()}</button>
+                  <NavLink to={title.title}>
+                    <button>{title.title.toLocaleUpperCase()}</button>
+                  </NavLink>
                 </div>
               </div>
             );

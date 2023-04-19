@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
-export const Title: FC = () => {
+export const Title: FC<{ title: string }> = ({ title }) => {
   return (
-    <div>
-      <h1></h1>
+    <div className="mt-20">
+      <h1>{title}</h1>
     </div>
   );
 };
