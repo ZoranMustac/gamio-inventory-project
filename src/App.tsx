@@ -9,7 +9,8 @@ import {
   Routes,
   NavLink,
 } from "react-router-dom";
-import { Title } from "./components/title/title";
+import { Overview } from "./components/titles/overview";
+import { Settings } from "./components/titles/settings";
 import { useHeader } from "./components/header/useHeader";
 
 const App = () => {
@@ -18,22 +19,16 @@ const App = () => {
   return (
     <Router>
       <Header />
-
       <Routes>
+        <Route path="/Overview" element={<Overview />} />
         <Route
-          path="/Overview"
+          path="/Inventory"
           element={
             <Cards title="test1" tag="" code="" image="" buttonText="" />
           }
         />
-        <Route
-          path="/Inventory"
-          element={<Title title={title.toLocaleUpperCase()} />}
-        />
-        <Route
-          path="/Settings"
-          element={<Title title={title.toLocaleUpperCase()} />}
-        />
+        <Route path="/Settings" element={<Settings />} />
+        <Route path="*" element={<Overview />} />
       </Routes>
     </Router>
   );
