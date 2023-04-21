@@ -16,12 +16,15 @@ export const Header: FC = () => {
     pb-2
 `;
 
-  const active: string = `
-    active:border-solid
-    active:border-orange-500
-    active:border-b-4
-    active:text-white
+  const activeButton: string = `
+    border-solid
+    border-orange-500
+    border-b-4
+    text-white
+    pb-2
 `;
+
+  const isActive = (index: number) => index === activeIndex;
 
   const handleClick = (index: number) => {
     setActiveIndex(index);
@@ -34,19 +37,13 @@ export const Header: FC = () => {
           src="https://eloncdn.blob.core.windows.net/eu3/sites/74/2019/09/students-1.jpg"
           className="w-full h-full object-cover opacity-40"
         />
-        <div className="flex flex-wrap pb-12 ml-48 pl-2 forward">
+        <div className="flex flex-wrap pb-12 md:ml-36 lg:ml-48 pl-2 forward">
           {views.map((title, index) => {
             return (
               <div className="ml-12 font-bold text-gray-400 text-xs forward">
-                <div className={buttons}>
+                <div className={isActive(index) ? activeButton : buttons}>
                   <NavLink to={title.title}>
-                    <button
-                      style={{
-                        borderBottomColor:
-                          index === activeIndex ? `border-orange-500` : "",
-                      }}
-                      onClick={() => handleClick(index)}
-                    >
+                    <button onClick={() => handleClick(index)}>
                       {title.title.toLocaleUpperCase()}
                     </button>
                   </NavLink>

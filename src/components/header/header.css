@@ -2,10 +2,6 @@
   object-fit: cover;
 }
 
-.clip-rectangle {
-  clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
-}
-
 .grid-items {
   margin: 45px;
 }
