@@ -9,3 +9,9 @@
 .codeText {
   background: linear-gradient(to right, #ffffff 30%, #eef3ff 30%, #eef3ff 100%);
 }
+
+@media screen and (max-width: 768px) {
+  .inventory {
+    visibility: hidden;
+  }
+}

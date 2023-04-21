@@ -1,3 +1,5 @@
+import "./App.css";
+
 export default class Styles {
   claimedStyle = `
     bg-lime-100
@@ -32,7 +34,9 @@ export default class Styles {
   text-xs
   `;
 
-  backgroundWhite = `bg-white`;
+  backgroundWhite = `bg-white shadow-2xl`;
 
-  backgroundGray = `bg-gray-100 z-10 rounded-xl`;
+  backgroundGray = `bg-gray-100 shadow-2xl`;
+
+  backgroundShipped = `border-color bg-gray-100 shadow-xl`;
 }

@@ -8,9 +8,6 @@ import { IProps } from "../../Interfaces/IProps";
 import Styles from "../../styles";
 
 export const Cards: FC<IProps> = ({ title, tag, code, image }) => {
-  const colorWhite = `backgroundColor: blue`;
-  const colorGray = `backgroundColor: red`;
-
   const styles = new Styles();
 
   return (
@@ -21,8 +18,10 @@ export const Cards: FC<IProps> = ({ title, tag, code, image }) => {
             return styles.backgroundWhite;
           case "owned":
             return styles.backgroundWhite;
-          default:
+          case "used":
             return styles.backgroundGray;
+          default:
+            return styles.backgroundShipped;
         }
       })()}
     >
@@ -30,8 +29,8 @@ export const Cards: FC<IProps> = ({ title, tag, code, image }) => {
         sx={{
           width: 300,
           height: 450,
-          borderRadius: 3,
         }}
+        square={true}
         style={{ backgroundColor: "transparent" }}
       >
         <div className="object-cover object-center mt-8 flex justify-center items-center">
