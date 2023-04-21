@@ -3,7 +3,7 @@ const arrayItems = {
     {
       image:
         "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png",
-      title: "God of War",
+      title: "God of War: Record of Ragnarok",
       tag: "claimed",
       code: "takeitnowpoeple",
     },

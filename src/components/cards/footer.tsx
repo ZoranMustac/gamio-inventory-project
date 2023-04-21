@@ -17,10 +17,10 @@ export const Footer: FC<IProps> = ({ tag, code }) => {
     <div>
       {tag === "claimed" || tag === "used" ? (
         <div className="flex border w-64 rounded p-2 codeText mt-2">
-          <div className="mr-1">
+          <div className="mr-1 text-[#495967]">
             <QrCode2Icon />
           </div>
-          <div className="mr-2 text-xs font-bold text-gray-500 mt-1">
+          <div className="mr-2 text-[12px] font-bold text-[#495967] mt-1">
             <p>CODE</p>
           </div>
 
@@ -31,7 +31,7 @@ export const Footer: FC<IProps> = ({ tag, code }) => {
             onChange={({ target: { text } }) => setText(text)}
           />
           <CopyToClipboard text={text} onCopy={() => setCopied(true)}>
-            <button>
+            <button className="text-[#495967]">
               <ContentCopyIcon />
             </button>
           </CopyToClipboard>

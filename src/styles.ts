@@ -3,40 +3,57 @@ import "./App.css";
 export default class Styles {
   claimedStyle = `
     bg-lime-100
-    w-16
-    rounded-sm
+    w-[75px]
+    rounded-[4px]
     font-semibold
-    text-lime-400
-    text-xs
+    text-[#85EE00]
+    text-[12px]
   `;
 
   ownedStyle = `
-    bg-blue-500
-    w-14
-    rounded-sm
+    bg-[#4175FA]
+    w-[65px]
+    rounded-[4px]
     font-semibold
     text-white
-    text-xs
+    text-[12px]
   `;
 
   usedStyle = `
-    bg-gray-300
-    w-10
-    rounded-sm
+    bg-[#E5E5E5]
+    w-[51px]
+    rounded-[4px]
     font-semibold
-    text-gray-500
-    text-xs
+    text-[#6F819C]
+    text-[12px]
   `;
 
   shippedStyle = `
   font-semibold
-  text-black
-  text-xs
+  text-[#143757]
+  text-[12px]
   `;
 
   backgroundWhite = `bg-white shadow-2xl`;
 
-  backgroundGray = `bg-gray-100 shadow-2xl`;
+  backgroundGray = `bg-[#F7F7F7] shadow-2xl`;
 
-  backgroundShipped = `border-color bg-gray-100 shadow-xl`;
+  backgroundShipped = `border-color bg-[#F7F7F7] shadow-xl`;
+
+  buttons: string = `
+    hover:border-solid
+    hover:border-[#FC6947]
+    hover:border-b-4
+    hover:text-white
+    pb-2
+`;
+
+  activeButton: string = `
+    border-solid
+    border-[#FC6947]
+    border-b-4
+    text-white
+    pb-2
+    active-button
+`;
 }

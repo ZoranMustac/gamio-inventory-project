@@ -60,7 +60,7 @@ export const Cards: FC<IProps> = ({ title, tag, code, image }) => {
             {tag.toLocaleUpperCase()}
           </div>
 
-          <div className="font-extrabold line-clamp">
+          <div className="font-extrabold text-[#143757] line-clamp">
             {title?.toLocaleUpperCase()}
           </div>
           <Footer tag={tag} code={code} />

@@ -2,15 +2,26 @@
   clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .clip-rectangle {
     visibility: hidden;
   }
-}
 
-@media screen and (min-width: 640px) {
-  .horizontal {
-    justify-content: center;
-    align-content: center;
+  .top-center {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .grid-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .grid-items {
+    display: grid;
+    justify-items: center;
+    align-items: center;
   }
 }

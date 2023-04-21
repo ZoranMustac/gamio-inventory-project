@@ -8,7 +8,7 @@ import "./cards.css";
 export const ItemCards: FC = () => {
   return (
     <div>
-      <h1 className="font-extrabold text-gray-700 mt-32 mb-6 inventory">
+      <h1 className="font-extrabold text-gray-700 mt-32 mb-6 title">
         INVENTORY
       </h1>
       <div className="flex flex-wrap gap-8">
