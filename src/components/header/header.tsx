@@ -27,7 +27,7 @@ export const Header: FC = () => {
         <div className="flex flex-wrap pb-12 md:ml-36 lg:ml-48 pl-2 aligning">
           {views.map((title, index) => {
             return (
-              <div className="md:ml-12 font-bold text-gray-400 text-xs forward">
+              <div className="md:ml-12 font-bold md:text-gray-400 text-xs forward">
                 <div
                   className={
                     isActive(index) ? styles.activeButton : styles.buttons
@@ -44,7 +44,12 @@ export const Header: FC = () => {
           })}
         </div>
       </div>
-      <User username="GUD BOI" userHandle="@GUDBOI45" score={24} />
+      <User
+        username="GUD BOI"
+        userHandle="@GUDBOI45"
+        score={24}
+        image="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      />
       <div className="line" />
     </div>
   );

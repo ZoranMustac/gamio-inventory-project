@@ -63,14 +63,11 @@ export const Cards: FC<IProps> = ({ title, tag, code, image }) => {
           <div className="font-extrabold text-[#143757] line-clamp">
             {title?.toLocaleUpperCase()}
           </div>
-          <Footer tag={tag} code={code} />
+          <div className="child">
+            <Footer tag={tag} code={code} />
+          </div>
         </div>
       </Card>
-      {/*copied ? (
-        <span className="w-24 bg-lime-100 rounded font-semibold text-lime-400 text-xs p-1">
-          COPIED
-        </span>
-      ) : null*/}
     </div>
   );
 };

@@ -15,6 +15,14 @@
   );
 }
 
+.code-button {
+}
+
+.child {
+  align-self: center;
+  margin-top: auto;
+}
+
 @media screen and (max-width: 769px) {
   .title {
     margin-top: -20px;

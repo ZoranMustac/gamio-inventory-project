@@ -1,4 +1,4 @@
-import "./App.css";
+import "./components/header/header.css";
 
 export default class Styles {
   claimedStyle = `
@@ -44,7 +44,7 @@ export default class Styles {
     hover:border-solid
     hover:border-[#FC6947]
     hover:border-b-4
-    hover:text-white
+    md:hover:text-white
     pb-2
 `;
 
@@ -52,7 +52,7 @@ export default class Styles {
     border-solid
     border-[#FC6947]
     border-b-4
-    text-white
+    md:text-white
     pb-2
     active-button
 `;

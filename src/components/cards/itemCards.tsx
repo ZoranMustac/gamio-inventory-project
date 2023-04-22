@@ -11,7 +11,7 @@ export const ItemCards: FC = () => {
       <h1 className="font-extrabold text-gray-700 mt-32 mb-6 title">
         INVENTORY
       </h1>
-      <div className="flex flex-wrap gap-8">
+      <div className="flex flex-wrap gap-8 mb-16">
         {arrayItems?.items.map((item) => (
           <Cards
             image={item.image}
